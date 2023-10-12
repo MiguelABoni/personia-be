@@ -1,0 +1,56 @@
+{
+  "name": "personia-be",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BackEnd development for the Personia project",
+  "keywords": [
+    "personia",
+    "backend",
+    "nodeJS",
+    "typescript",
+    "express",
+    "jest",
+    "eslint",
+    "standard",
+    "prettier",
+    "conventional-commits"
+  ],
+  "author": "MiguelBedoya IsabelaCeballos",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev src/index.ts",
+    "build": "tsc",
+    "start": "node build/index.js",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier . --write",
+    "test": "jest --watchAll",
+    "coverage": "jest --coverage --passWithNoTests",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "dotenv": "16.3.1",
+    "express": "4.18.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.7.2",
+    "@commitlint/config-conventional": "17.7.0",
+    "@trivago/prettier-plugin-sort-imports": "4.2.0",
+    "@types/express": "4.17.19",
+    "@types/jest": "29.5.5",
+    "@types/node": "20.8.4",
+    "@typescript-eslint/eslint-plugin": "6.7.5",
+    "@typescript-eslint/parser": "6.7.5",
+    "eslint": "8.51.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-prettier": "5.0.1",
+    "husky": "8.0.3",
+    "jest": "29.7.0",
+    "lint-staged": "14.0.1",
+    "prettier": "3.0.3",
+    "standard": "17.1.0",
+    "ts-jest": "29.1.1",
+    "ts-node-dev": "2.0.0",
+    "typescript": "5.2.2"
+  }
+}
