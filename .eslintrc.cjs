@@ -11,4 +11,10 @@ module.exports = {
   root: true,
   env: { node: true, jest: true },
   ignorePatterns: ['build', '.eslintrc.cjs'],
+  "prettier/prettier": [
+    "error",
+    {
+      "endOfLine": "auto"
+    },
+  ],
 };
