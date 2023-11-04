@@ -1,12 +1,10 @@
 import axios, { AxiosError } from 'axios';
-import { Response, Request } from 'express';
+import { Response } from 'express';
 
-export const getCsv = async (res: Response, req: Request) => {
+export const getAnios = async (res: Response) => {
   try {
-    const anio = req.query.anio;
-
     const response = await axios.get(
-      `${process.env.API_URL_BACKEND_PYTHON}/csv?anio=${anio}`,
+      `${process.env.API_URL_BACKEND_PYTHON}/years`,
     );
     res.send(response.data);
   } catch (error) {

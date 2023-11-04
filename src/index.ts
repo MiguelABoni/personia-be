@@ -1,10 +1,11 @@
-import { MunicipiosRouter } from '././Routes/Municipios.controller';
+import { AniosRouter } from './Routes/Anios.controller';
 import { ComunasRouter } from './Routes/Comunas.controller';
 import { CsvRouter } from './Routes/Csv.controller';
 import { EventosDiaRouter } from './Routes/EventosDia.controller';
 import { EventosEpsRouter } from './Routes/EventosEps.controller';
 import { EventosSaviaRouter } from './Routes/EventosSavia.controller';
 import { EventosSuraRouter } from './Routes/EventosSura.controller';
+import { MunicipiosRouter } from './Routes/Municipios.controller';
 import { NgramasRouter } from './Routes/Ngramas.controller';
 import { ServiciosRouter } from './Routes/Servicios.controller';
 import { StopWordsRouter } from './Routes/StopWords.controller';
@@ -35,6 +36,7 @@ app.get('/api/v1', (_req, res: Response) => {
 
 /** ROUTES */
 app.use('/api/v1', CsvRouter);
+app.use('/api/v1', AniosRouter);
 app.use('/api/v1', MunicipiosRouter);
 app.use('/api/v1', ComunasRouter);
 app.use('/api/v1', ServiciosRouter);
