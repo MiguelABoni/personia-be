@@ -20,8 +20,13 @@ import express, { Express, Response } from 'express';
 /** APP EXPRESS */
 const app: Express = express();
 
+const corsOptions = {
+  origin: 'http://personia.personeriamedellin.gov.co',
+  optionsSuccessStatus: 200,
+};
+
 /** CORS */
-app.use(cors());
+app.use(cors(corsOptions));
 
 /** USE JSON IN THE API */
 app.use(express.json());
